@@ -1,0 +1,4 @@
+ Nosotros creamos un archivo aparte para la configuración
+ del proyecto 👉 config/index.js y lo exportamos
+
+ En nuestro archivo de index.js ponemos la parte inicial del proyecto
