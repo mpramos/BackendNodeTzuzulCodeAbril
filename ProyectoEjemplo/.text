@@ -1,16 +1,3 @@
-Eliminamos el archivo .env porque usualmente tenemos
-informacion sensible en ese archivo, como ser : tokens ,
-credenciales
-
-En gitignore ponemos esos documentos que queremos ocultar
-
-En el archivo .en.example se deja en vacio para que los
-desarrolladores puedan rellenar y se sepan que variables
-usamos o se necesitan
-
-Nodejs lanza un evento mientras alguien mas esta escuchando,
-asi nosotros podremos gestionar los eventos usa el patrón de diseño observer
-
-Patrón de diseño observer
-
-Nosotros cuando lanzamos una peticion en el frontend lanza un evento para que nosotros podamos escuchar
+REST API
+En el documento index.js podemos ver los metodos 
+A través de los metodos que acciones queremos hacer

@@ -1,15 +1,32 @@
-// PARTE INICIAL DEL PROYECTO
-const { env, port } = require("./config");
+const { json } = require("express");
+const express =require("express")
+const {port}=require("./config")
 
-const http= require("http")
-const server = http.createServer()
-server.on('request',(request,response)=>{
-    if(request.method=="POST" && request.url=="/dsatos"){
-        // TODO: Regresar al momento de ver streams
-    }
-    response.statusCode ="200"
-    response.end("Hola mundo")
+const users=[]
+const app=express();
+
+app.get("/",(req,res)=>{
+    //enviamos la información
+    res.json(users)
 })
-server.listen(port)
-console.log("Servidor funcionando en : http://localhost:"+port)
-console.log(env)
+app.post("/",(req,res)=>{
+    const user=req.body
+    users.push(user)  
+    return res.json(users)
+})
+app.put("/:id",(req,res)=>{
+    const id=req.params.id
+    users=users.map(user=>{
+        if(id==user.id){
+             
+        }
+    })
+})
+app.delete("/:id",(req,res)=>{
+    const id=req.params.id
+    users=users.filter((user)=>id!==user.id)
+    return res.json(users)
+})
+app.listen(port,()=>{
+    console.log("Escuchando : http://localhost:"+ port)
+})
